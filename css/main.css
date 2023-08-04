@@ -1,0 +1,53 @@
+@font-face {
+  font-family: 'Geologica';
+  src: url(fonts/Geologica/static/Geologica-Regular.ttf);
+}
+
+@font-face {
+  font-family: 'Open Sans';
+  src: url(fonts/Open_Sans/static/OpenSans-Regular.ttf);
+}
+
+body {
+  background-color: #f2f2f2;
+  color: #453f3f;
+}
+
+h1, h2, h3, h4, h5, h6{
+  font-family: 'Geologica', sans-serif;
+}
+
+p {
+  font-family: 'Open Sans', sans-serif;
+}
+
+/*Header*/
+header, header p {
+  text-align: center;
+}
+
+/*Nav*/
+nav{
+  background-color: #f2f2f2;
+  margin: 0 auto;
+  position: sticky;
+  top: 0;
+}
+
+nav ul{
+  padding: 1rem auto;
+  display: flex;
+  justify-content: center;
+}
+
+nav ul li{
+  padding: 1rem 5% 1rem 5%;
+}
+
+nav li:hover, nav li:focus{
+  transform: scale(1.2);
+  transition-duration: 100ms;
+}
+
+
+

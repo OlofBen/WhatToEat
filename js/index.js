@@ -1,14 +1,13 @@
 import { getRecipeBoxWithCategory, getRecipeBox, setPathToRecipe} from "./recipeBox.js"
-import { mealCategories } from "./data.js"
 import { removeCookies } from "./util.js"
+import { selectedCategory, addButtonListeners } from "./optionButtons.js"
 
 const recipeHolder = document.getElementById('recipe')
-let selectedCategory = 'Any'
 setPathToRecipe('./html/recipe.html')
 
 setTimeout(addRecipe, 10)
 removeCookies()
-addButtonListeners(newRecipeAction)
+addButtonListeners(newRecipeAction, 'Button')
 
 async function addRecipe() {
   recipeHolder.appendChild(await recipeBox())
@@ -26,24 +25,3 @@ async function recipeBox() {
     return await getRecipeBoxWithCategory(selectedCategory)
   }
 }
-
-function addButtonListeners(newRecipeAction) {
-  mealCategories.forEach(category => {
-    addButtonListener(category, newRecipeAction)
-    });
-  document.getElementById('AnyButton')
-    .onclick = (_) => {
-      selectedCategory = 'Any'
-      newRecipeAction()
-  }
-}
-
-function addButtonListener(category, newRecipeAction) {
-  const id = category + 'Button'
-  document.getElementById(id)
-    .onclick = (_) => {
-      selectedCategory = category
-      newRecipeAction()
-    }
-}
-
