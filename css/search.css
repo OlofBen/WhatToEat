@@ -1,0 +1,36 @@
+#searchbar {
+  height: 3rem;
+  width: 40%;
+  text-align: center;
+  font-size: large;
+  margin: 1rem;
+  border-radius: 15px;
+  border: 1px #000 solid;
+  padding: 5px 5px 5px 25px;
+}
+
+#recipes {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  margin: 2rem 10%;
+  justify-content: center;
+}
+
+img {
+  width: 20rem;
+  height: auto;
+  max-height: 20rem;
+  object-fit: cover;
+ 
+}
+
+h2 {
+ margin-bottom: 1rem;
+}
+
+.recipe {
+  background-color: #ffff;
+  margin: 1rem;
+  padding: 1rem;
+}

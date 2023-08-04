@@ -11,25 +11,41 @@
 body {
   background-color: #f2f2f2;
   color: #453f3f;
+  text-align: center;
+}
+
+p {
+  font-family: 'Open Sans', sans-serif;
+  font-size: medium;
 }
 
 h1, h2, h3, h4, h5, h6{
   font-family: 'Geologica', sans-serif;
 }
 
-p {
-  font-family: 'Open Sans', sans-serif;
-}
+h1 { font-size: x-large;}
+h2 { font-size: larger;}
+h3 { font-size: large;}
+
+
 
 /*Header*/
-header, header p {
-  text-align: center;
+header {
+  background-color: #4CAF50;;
+  padding: 4rem 1rem;
+  margin: 1rem;
+  color: #ffff;
+}
+
+header p{
+  padding: 1rem 15%;
+  font-size: large;
 }
 
 /*Nav*/
 nav{
   background-color: #f2f2f2;
-  margin: 0 auto;
+  margin: 1rem auto;
   position: sticky;
   top: 0;
 }
@@ -49,5 +65,7 @@ nav li:hover, nav li:focus{
   transition-duration: 100ms;
 }
 
-
+.currentPage {
+  background-color: gray;
+}
 
