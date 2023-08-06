@@ -4,6 +4,7 @@
 
 img {
   width: 60%;
+  max-width: 50rem;
   height: auto;
   max-height: 35rem;
   object-fit: cover;
