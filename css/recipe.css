@@ -8,7 +8,8 @@ h1 {
   grid-column: 2;
 }
 
-table{
+table {
+  grid-row: 1;
   background-color: #2a602b;
   margin: 3rem;
   margin-top: 0;
@@ -18,14 +19,15 @@ table{
   border: 1px solid black;
   grid-column: 1;
   max-height: 40rem;
+  color: #ffffff;
 }
 
 table th {
   padding: 1rem;
   font-size: large;
-  color: white;
 }
-table td{
+
+table td {
   padding: 0.5rem;
 }
 
@@ -41,4 +43,44 @@ table td{
 
 #video {
   grid-column: 3;
+}
+
+@media(max-width: 1600px) {
+  main {
+    grid-template-columns: 40rem 1fr;
+    grid-row: 40rem 1fr;
+  }
+
+  #recipeText {
+    grid-column: 2;
+    grid-row-start: 1;
+    grid-row-end: 3;
+  }
+
+  #video {
+    grid-column: 1;
+    grid-row: 2;
+    margin: 1rem;
+  }
+
+  table {
+    max-height: fit-content;
+  }
+}
+
+
+@media(max-width: 1120px) {
+  main {
+    grid-template-columns: 1fr;
+  }
+
+  #recipeText {
+    grid-column: 1;
+    grid-row: 2;
+  }
+
+  #video {
+    grid-column: 1;
+    grid-row: 3;
+  }
 }

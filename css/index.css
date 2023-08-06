@@ -1,6 +1,5 @@
 .recipe {
   margin: 1rem;
-  height: 43rem;
 }
 
 img {
@@ -25,6 +24,8 @@ h2 {
     position: sticky;
     bottom: 0;
   }
+
+  .recipe{height: 40rem;}
 }
 
 #options ul {

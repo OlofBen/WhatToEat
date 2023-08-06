@@ -31,7 +31,6 @@ function moreOrFewer(){
 
 function removeLast(){
   const last = recipeList.lastChild
-  console.log(last);
   recipeList.removeChild(last)  
 }
 

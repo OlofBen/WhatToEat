@@ -1,12 +1,36 @@
 main {
   display: grid;
-  grid-template-columns: 5% 1fr;
+  grid-template-columns: 15rem 1fr;
   grid-template-rows: 1fr;
 }
+@media(max-width: 720px) {
+  main {
+    display: flex;
+    flex-direction: column;
+  }
+}
+
 
 #options {
   grid-column: 1;
   margin: 2rem;
+  
+}
+
+#options ul{
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+}
+
+@media(max-width: 720px) {
+  #options ul {
+    flex-direction: row;
+    justify-content: center;
+  }
+  #options ul li{
+    margin: 0.5rem;
+  }
 }
 
 #recipeSection {
