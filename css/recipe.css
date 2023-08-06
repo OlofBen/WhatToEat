@@ -1,0 +1,44 @@
+main {
+  display: grid;
+  grid-template-columns: 20% 1fr 40%;
+  justify-content: center;
+}
+
+h1 {
+  grid-column: 2;
+}
+
+table{
+  background-color: #2a602b;
+  margin: 3rem;
+  margin-top: 0;
+  border-spacing: 0;
+  border-collapse: separate;
+  border-radius: 10px;
+  border: 1px solid black;
+  grid-column: 1;
+  max-height: 40rem;
+}
+
+table th {
+  padding: 1rem;
+  font-size: large;
+  color: white;
+}
+table td{
+  padding: 0.5rem;
+}
+
+#recipeText {
+  margin: 1rem 4rem;
+  grid-column: 2;
+  font-size: large;
+  text-align: left;
+  background-color: white;
+  padding: 4rem;
+  line-height: 2;
+}
+
+#video {
+  grid-column: 3;
+}

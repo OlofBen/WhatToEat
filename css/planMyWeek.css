@@ -1,0 +1,88 @@
+main {
+  display: grid;
+  grid-template-columns: 5% 1fr;
+  grid-template-rows: 1fr;
+}
+
+#options {
+  grid-column: 1;
+  margin: 2rem;
+}
+
+#recipeSection {
+  grid-column: 2;
+}
+
+button {
+  background-color: #2a602b;
+  border: none;
+  color: white;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: large;
+  width: 7rem;
+  height: 2.5rem;
+  margin-top: 1rem;
+}
+
+img {
+  width: 15rem;
+  height: 15rem ;
+  object-fit: cover;
+}
+
+h2 {
+  margin-bottom: 1rem;
+}
+
+#recipesList {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  margin: 2rem 3rem;
+  justify-content: center;
+}
+
+.recipeContainer {
+  display: grid;
+  grid-template-columns: 17rem 7rem;
+  background-color: #ffff;
+  margin: 0.3rem;
+  
+}
+
+.recipe {
+  margin: 1rem;
+  padding: 1rem;
+}
+
+.recipeOptions {
+  margin: 1rem;
+}
+
+.recipeOptions ul{
+  display: flex;
+  flex-direction: column;
+  margin: 0rem;
+  padding: 0rem;
+  flex-wrap: wrap;
+  max-height: 20rem;
+}
+
+.recipeOptions ul li{
+  margin: 0.3rem;
+}
+
+.recipeOptions h2 {
+  margin-top: 1rem;
+  font-size: medium;
+}
+
+.recipeOptions ul li button{
+  width: 5rem;
+  height: 1rem;
+  font-size: small;
+  padding: 0rem;
+  margin: 0rem;
+}
