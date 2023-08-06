@@ -6,6 +6,7 @@
 	<meta charset="UTF-8" />
 	<link href="../css/reset.css" rel="stylesheet">
 	<link href="../css/main.css" rel="stylesheet">
+	<link href="../css/planMyWeek.css" rel="stylesheet">
 	<meta name="viewport" content="width - device-width,
       initial-scale = 1,
       maximum-scale = 2">
@@ -16,18 +17,21 @@
 	<nav>
 		<ul>
 			<li><a href="../index.html">Home</a></li>
-			<li class="currentPage"><a href="planMyWeek.html" >Plan my week</a></li>
+			<li class="currentPage"><a href="planMyWeek.html">Plan my week</a></li>
 			<li><a href="search.html">Search</a></li>
 			<li><a href="about.html">About us / Contact</a></li>
 		</ul>
 	</nav>
-	<main>
+	<header>
 		<h1>Plan my week</h1>
-		<p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Officiis tempora quidem, aliquid quas deserunt enim
-			numquam, nihil autem reprehenderit, error vel nam a eum neque laboriosam et! Illo, sapiente repellendus!</p>
+		<p>Here are som recipes that you can eat this week! Feel free to customize.</p>
+	</header>
+	<main>
 		<section id="options">
 			<h2>Options</h2>
 			<ul>
+				<li><button title="more dishes" id="more">More</button></li>
+				<li><button title="fewer dishes" id="fewer">Fewer</button></li>
 				<li><button title="AbyDish" id="AnyButton">Any</button></li>
 				<li><button title="VeganDish" id="VeganButton">Vegan</button></li>
 				<li><button title="VegetarianDish" id="VegetarianButton">Vegetarian</button></li>
@@ -40,11 +44,11 @@
 				<li><button title="PastaDish" id="PastaButton">Pasta</button></li>
 			</ul>
 		</section>
-		<section>
+		<section id="recipeSection">
 			<h2>Recipes</h2>
 			<ul id="recipesList"></ul>
 		</section>
-		
+
 	</main>
 
 </body>

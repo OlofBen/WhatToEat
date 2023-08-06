@@ -38,8 +38,12 @@ h2 {
   padding: 1rem 2rem;
 }
 
+#recipe {
+  min-height: 35rem;
+}
+
 .button {
-  background-color: #4CAF50;
+  background-color: #2a602b;
   border: none;
   color: white;
   text-align: center;

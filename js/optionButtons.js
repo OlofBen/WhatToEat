@@ -15,7 +15,6 @@ export function addButtonListeners(newRecipeAction, name) {
 
 function addButtonListener(category, newRecipeAction, name) {
   const id = category + name
-  console.log('id', id)
   document.getElementById(id)
     .onclick = (_) => {
       selectedCategory = category

@@ -6,6 +6,7 @@
 	<meta charset="UTF-8" />
 	<link href="../css/reset.css" rel="stylesheet">
 	<link href="../css/main.css" rel="stylesheet">
+	<link href="../css/recipe.css" rel="stylesheet">
 	<meta name="viewport" content="width - device-width,
       initial-scale = 1,
       maximum-scale = 2">
@@ -21,15 +22,20 @@
 			<li><a href="about.html">About us / Contact</a></li>
 		</ul>
 	</nav>
-	<main>
+	<header>
 		<h1 id="recipeTitle"></h1>
-		<p id="recipeText"></p>
-		<table id="recipeIngredients">
-			<tr>
-				<th>Ingredient</th>
-				<th>Amount</th>
-			</tr>
+	</header>
+	<main>
+		<table>
+			<thead>
+				<tr>
+					<th>Ingredient</th>
+					<th>Amount</th>
+				</tr>
+			</thead>
+			<tbody id="recipeIngredients"></tbody>
 		</table>
+		<p id="recipeText"></p>
 		<iframe id="video" width="560" height="315" src="" title="YouTube video player" allowfullscreen></iframe>
 	</main>
 </body>

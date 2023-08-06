@@ -32,7 +32,7 @@ function createRecipeBox(recipe) {
 	container.className = 'recipe'
 	container.id = recipe.idMeal
 	container.appendChild(createHeader(recipe.strMeal, recipe.idMeal))
-	container.appendChild(createImage(recipe.strMealThumb))
+	container.appendChild(createImage(recipe.strMealThumb, recipe.strMeal))
 	return container
 }
 
@@ -46,8 +46,9 @@ function createHeader(headerText, recipeId) {
 	header.appendChild(link)
 	return header
 }
-function createImage(src) {
+function createImage(src, alt) {
 	const image = document.createElement('img')
 	image.src = src
+	image.alt = alt
 	return image
 }

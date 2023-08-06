@@ -10,6 +10,30 @@ removeCookies()
 setPathToRecipe('./recipe.html')
 
 addButtonListeners(newRecipeAction, 'Button')
+crateRecipes()
+moreOrFewer()
+
+function moreOrFewer(){
+  const more = document.getElementById('more')
+  const fewer = document.getElementById('fewer')
+  more.onclick = () => {
+    numberOfRecipes++
+    createRecipe(numberOfRecipes - 1)
+  }
+    
+  fewer.onclick = () => {
+   if (numberOfRecipes > 0){
+    numberOfRecipes--
+    removeLast()
+   }
+  }
+}
+
+function removeLast(){
+  const last = recipeList.lastChild
+  console.log(last);
+  recipeList.removeChild(last)  
+}
 
 async function newRecipeAction() {
   removeRecipes()
@@ -21,12 +45,17 @@ async function removeRecipes() {
 }
 async function crateRecipes() {
   for (let i = 0; i < numberOfRecipes; i++) {
-    const listItem = document.createElement('li')
-    const box = await recipeBox()
-    listItem.appendChild(box)
-    recipeList.appendChild(listItem)
-    addBoxButtons(i, listItem)
+    await createRecipe(i)
   }
+}
+
+async function createRecipe(i) {
+  const listItem = document.createElement('li')
+  listItem.className = 'recipeContainer'
+  const box = await recipeBox()
+  listItem.appendChild(box)
+  recipeList.appendChild(listItem)
+  addBoxButtons(i, listItem)
 }
 
 function addBoxButtons(index, listItem) {
@@ -47,6 +76,7 @@ function addBoxButtons(index, listItem) {
 	<li><button title="Pasta Recipe ${index}" id="PastaButtonRecipe${index}">Pasta</button></li>
 </ul>
   `
+  container.className = "recipeOptions"
   listItem.appendChild(container)
   addButtonListeners(() => newRecipe(listItem), 'ButtonRecipe' + index)
 }
