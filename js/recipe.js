@@ -4,7 +4,6 @@ import { lookupMealById } from "./data.js"
 const recipeTitle = document.getElementById('recipeTitle')
 const recipeText = document.getElementById('recipeText')
 const recipeIngredients = document.getElementById('recipeIngredients')
-const video = document.getElementById('video')
 
 console.log(document.cookie);
 setTimeout(loadRecipe, 10)
@@ -24,7 +23,6 @@ async function loadRecipe() {
       tableRow(ingredient, amount)
     )
   }
-  video.src = recipe.strYoutube
 }
 
 function tableRow(ingredient, amount) {
